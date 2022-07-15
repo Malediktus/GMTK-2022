@@ -6,6 +6,8 @@ public class EnemieTest1 : MonoBehaviour
 {
     public float speed = 5f;
     public float targetDistance = 5f;
+    public float runAwaySpped = 2.5f;
+    public float runAwayDistance = 3f;
     public float health;
     public float marginToTaget = 1f;
 
@@ -36,16 +38,15 @@ public class EnemieTest1 : MonoBehaviour
         Vector3 selfPosition = transform.position;
         Vector2 selfPositionVect2 = new Vector2(selfPosition.x, selfPosition.y);
         Vector2 directiontoTarget = target.transform.position - selfPosition;
-        Vector2 directiontoTargetNormalized = directiontoTarget.normalized;
 
 
-        if (Vector2.Distance(target.transform.position, selfPositionVect2) > targetDistance && Mathf.Abs(Vector2.Distance(target.transform.position, selfPositionVect2)) > targetDistance + marginToTaget)
+        if (Vector2.Distance(target.transform.position, transform.position) > targetDistance && Mathf.Abs(Vector2.Distance(target.transform.position, transform.position)) > targetDistance + marginToTaget)
         {
-            rb.velocity = directiontoTargetNormalized * speed;
+            rb.velocity = directiontoTarget.normalized * speed;
         }
-        else if (Mathf.Abs(Vector2.Distance(target.transform.position, selfPositionVect2)) > targetDistance + marginToTaget)
+        else if(Vector2.Distance(target.transform.position, transform.position) < runAwayDistance)
         {
-            rb.velocity = -(directiontoTargetNormalized * speed);
+            rb.velocity = -directiontoTarget.normalized * runAwaySpped;
         }
         else
         {

@@ -358,13 +358,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  runAwaySpped: 2.5
   targetDistance: 5
   health: 10
   marginToTaget: 0.5
   target: {fileID: 1371185013}
   slimeBallPrefab: {fileID: 6136852766177541249, guid: c80fc23b9a67f3b428d92f068aaba7c1, type: 3}
   damage: 5
-  bulletForce: 5
+  bulletForce: 10
   shootDelay: 0.3
 --- !u!114 &620164184
 MonoBehaviour:
@@ -438,6 +439,7 @@ GameObject:
   - component: {fileID: 1371185015}
   - component: {fileID: 1371185014}
   - component: {fileID: 1371185017}
+  - component: {fileID: 1371185018}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -551,6 +553,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &1371185018
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371185013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1931792156
 GameObject:
   m_ObjectHideFlags: 0
