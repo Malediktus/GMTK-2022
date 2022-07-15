@@ -6,8 +6,13 @@ public class FMODBanks : MonoBehaviour
 {
 
     bool audioResumed = false;
-    public void Start()
+
+    private void Awake()
     {
+
+        FMODUnity.RuntimeManager.LoadBank("Main");
+        FMODUnity.RuntimeManager.LoadBank("Main.strings");
+
         if (!audioResumed)
         {
             var result = FMODUnity.RuntimeManager.CoreSystem.mixerSuspend();
@@ -16,12 +21,5 @@ public class FMODBanks : MonoBehaviour
             //  Debug.Log(result);
             audioResumed = true;
         }
-    }
-
-
-    private void Awake()
-    {
-        FMODUnity.RuntimeManager.LoadBank("Main");
-        FMODUnity.RuntimeManager.LoadBank("Main.strings");
     }
 }
