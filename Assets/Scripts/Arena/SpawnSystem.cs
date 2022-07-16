@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnSystem : MonoBehaviour
 {
+    public Text waveDisplay;
     public GameObject player;
     public Player playerClass;
     public float Radius = 20f;
@@ -47,6 +49,7 @@ public class SpawnSystem : MonoBehaviour
         }
 
         wave++;
+        waveDisplay.text = ("Wave: " + wave);
     }
 
     Vector2 randomPointInCircle()

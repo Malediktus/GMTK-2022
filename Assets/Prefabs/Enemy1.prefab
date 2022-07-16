@@ -115,14 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cef4c6ac8fe6e4f84d29b6e4e74313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  randomInterferance: 2
+  speed: 4
+  randomInterferance: 3
   ticksBetweenInterferance: 200
   interferance: {x: 0, y: 0}
-  targetDistance: 5
+  targetDistance: 6
   runAwaySpped: 2
   runAwayDistance: 3
-  health: 10
+  health: 8
   marginToTaget: 0.5
   target: {fileID: 0}
 --- !u!50 &8879001690218768531

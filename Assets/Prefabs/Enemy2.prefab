@@ -116,13 +116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  randomInterferance: 2
+  randomInterferance: 3
   ticksBetweenInterferance: 200
   interferance: {x: 0, y: 0}
   targetDistance: 10
   runAwaySpped: 2
-  runAwayDistance: 5
-  health: 5
+  runAwayDistance: 4
+  health: 6
   marginToTaget: 0.5
   target: {fileID: 0}
 --- !u!50 &8879001690218768531
