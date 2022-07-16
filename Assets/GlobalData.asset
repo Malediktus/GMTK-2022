@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4f1a714f74f44439c49957b82ad4c1, type: 3}
+  m_Name: GlobalData
+  m_EditorClassIdentifier: 
+  ExtraHealth: 130
+  ExtraBulletCount: 1
+  RangedDamageMultiplier: 1
+  MeleeDamageMultiplier: 0
+  MeleeReachMultiplier: 0
+  EnemyHealthMultiplier: 1
+  EnemyShotgunBulletCount: 3
+  EnemyBulletForceMultiplier: 1

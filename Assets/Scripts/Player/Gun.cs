@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-
-
 public class Gun : MonoBehaviour
 {
-
+    public DataContainer data;
     public GameObject prefab;
     public float delay;
     public float bulletForce;
@@ -16,7 +14,8 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        damage *= GameManager.RangedDamageMultiplier;
+        
+        damage *= data.RangedDamageMultiplier;
     }
 
     void Update()

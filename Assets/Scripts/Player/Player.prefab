@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976f33243e0e17640bb1718528db9c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   prefab: {fileID: 3038608620181618714, guid: 5cb817e09298aeb4997e73d80d4ae081, type: 3}
   delay: 0.3
   bulletForce: 20
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7e95b953ce3004092cff4d809d4f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   health: 100
   maxHealth: 75
   hittingRange: 1
@@ -465,7 +467,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7349381139479950349
 MonoBehaviour:

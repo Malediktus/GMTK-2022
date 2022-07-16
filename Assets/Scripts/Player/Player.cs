@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public DataContainer data;
+
     public float health = 75f;
     public float maxHealth = 75f;
 
@@ -25,14 +27,14 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        
         _rb = gameObject.GetComponent<Rigidbody2D>();
-        health += GameManager.ExtraHealth;
-        maxHealth += GameManager.ExtraHealth;
+        health += data.ExtraHealth;
+        maxHealth += data.ExtraHealth;
+        Debug.Log(data.ExtraHealth);
 
-        hittingDamage *= GameManager.MeleeDamageMultiplier;
-        hittingRange *= GameManager.MeleeReachMultiplier;
-
-        playerFacingRight = true;
+        hittingDamage *= data.MeleeDamageMultiplier;
+        hittingRange *= data.MeleeReachMultiplier;
     }
 
     private void Update()
