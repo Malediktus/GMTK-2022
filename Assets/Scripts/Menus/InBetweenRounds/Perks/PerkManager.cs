@@ -12,8 +12,6 @@ public class PerkManager : MonoBehaviour
     public List<GameObject> PositivePerkPrefabs;
     public List<GameObject> NegativePerkPrefabs;
     public List<Transform> perkPositions;
-    public List<IPerk> perks;
-
     // Use this for initialization
     void Start()
     {
@@ -39,17 +37,22 @@ public class PerkManager : MonoBehaviour
             else
             {
                 obj = Instantiate(NegativePerkPrefabs[Random.Range(0, NegativePerkPrefabs.Count)], perkPositions[i]);
-            }
-            perks.Add(obj.GetComponent<IPerk>());
+            }     
 
         }
     }
 
     public void ApplyPerks()
     {
-        for(int i = 0; i < perks.Count; i++)
+        for(int i = 0; i < PositivePerkPrefabs.Count; i++)
         {
-            perks[i].ApplyPerk();
+            IPerk iperk = PositivePerkPrefabs[i].GetComponent(typeof(IPerk)) as IPerk;
+            iperk.ApplyPerk();
+        }
+        for (int i = 0; i < NegativePerkPrefabs.Count; i++)
+        {
+            IPerk iperk = NegativePerkPrefabs[i].GetComponent(typeof(IPerk)) as IPerk;
+            iperk.ApplyPerk();
         }
     }
 
