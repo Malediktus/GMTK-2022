@@ -2,13 +2,13 @@
 using UnityEngine;
 
 
-public class LessHealthPerk : MonoBehaviour, IPerk
+public class EnemyShotgunDebuff : MonoBehaviour, IPerk
 {
     public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Less Health";
+    string text = "Enemy Shotgun nerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -54,6 +54,29 @@ public class LessHealthPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.ExtraHealth -= 10 * DieValue;
+        switch(DieValue)
+        {
+            case 0:
+                data.EnemyShotgunBulletCount = 3;
+                break;
+            case 1:
+                data.EnemyShotgunBulletCount = 3;
+                break;
+            case 2:
+                data.EnemyShotgunBulletCount = 2;
+                break;
+            case 3:
+                data.EnemyShotgunBulletCount = 2;
+                break;
+            case 4:
+                data.EnemyShotgunBulletCount = 2;
+                break;
+            case 5:
+                data.EnemyShotgunBulletCount = 1;
+                break;
+            case 6:
+                data.EnemyShotgunBulletCount = 1;
+                break;
+        }
     }
 }

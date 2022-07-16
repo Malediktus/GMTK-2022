@@ -1,21 +1,21 @@
-﻿using System.Collections;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-
-public class MeleeDamagePerk : MonoBehaviour, IPerk
+public class EnemySpeedDebuff : MonoBehaviour, IPerk
 {
     public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Melee \nDamage";
+    string text = "Enemy Speed nerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
 
     private void Start()
     {
-        
+
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -54,6 +54,31 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.MeleeDamageMultiplier = DieValue > 4 ? .15f * DieValue : 1.5f;
+        Debug.Log("Test please");
+        switch (DieValue)
+        {
+            case 0:
+                data.EnemySpeedMultiplier = 1f;
+                break;
+            case 1:
+                data.EnemySpeedMultiplier = 0.9f;
+                break;
+            case 2:
+                data.EnemySpeedMultiplier = 0.8f;
+                break;
+            case 3:
+                data.EnemySpeedMultiplier = 0.7f;
+                break;
+            case 4:
+                data.EnemySpeedMultiplier = 0.6f;
+                break;
+            case 5:
+                data.EnemySpeedMultiplier = 0.5f;
+                break;
+            case 6:
+                data.EnemySpeedMultiplier = 0.4f;
+                break;
+        }
+        Debug.Log(data.EnemySpeedMultiplier);
     }
 }

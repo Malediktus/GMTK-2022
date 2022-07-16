@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: -5481619498019289428}
   - component: {fileID: 1563416244654131272}
   - component: {fileID: -1240598609008507193}
-  - component: {fileID: 3114786387545037856}
+  - component: {fileID: 7831156496017905934}
   m_Layer: 8
-  m_Name: LessHealth
+  m_Name: EnemyHealthDebuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &3114786387545037856
+--- !u!114 &7831156496017905934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3263535665207082715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbbd398aca77ef4893a3d13ab923802, type: 3}
+  m_Script: {fileID: 11500000, guid: 282db9413fe164824a2aea5a14aac1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}

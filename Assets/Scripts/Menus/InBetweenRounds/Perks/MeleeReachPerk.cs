@@ -58,6 +58,6 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.MeleeReachMultiplier = .15f * DieValue;
+        data.MeleeReachMultiplier = DieValue > 4 ? .15f * DieValue : 1.5f;
     }
 }

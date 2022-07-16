@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
         _rb = gameObject.GetComponent<Rigidbody2D>();
         health += data.ExtraHealth;
         maxHealth += data.ExtraHealth;
-        Debug.Log(data.ExtraHealth);
 
         hittingDamage *= data.MeleeDamageMultiplier;
         hittingRange *= data.MeleeReachMultiplier;
@@ -107,8 +106,8 @@ public class Player : MonoBehaviour
         else if (inputVector.y == 0 && _rb.velocity.y < 0) { _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Clamp(_rb.velocity.y + slowDown * Time.deltaTime, -10, 0)); }
 
         // Flip sprite based on input
-        if (inputHorizontal > 0 && !playerFacingRight){flipFace();}
-        if (inputHorizontal < 0 && playerFacingRight){flipFace();}
+        if (inputHorizontal > 0 && playerFacingRight){flipFace();}
+        if (inputHorizontal < 0 && !playerFacingRight){flipFace();}
     }
 
     private void flipFace()

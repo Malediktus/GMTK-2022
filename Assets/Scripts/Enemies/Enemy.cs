@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         health *= data.EnemyHealthMultiplier;
+        speed *= data.EnemySpeedMultiplier;
         target = GameObject.FindGameObjectWithTag("Player");
         _healthScript = gameObject.GetComponent<EnemyHealthScript>();
         _healthScript.health = health;

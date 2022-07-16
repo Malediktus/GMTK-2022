@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new data")]
 public class DataContainer : ScriptableObject
 {
-    private void Awake()
+    private void OnEnable()
     {
         //Player
         ExtraHealth = 0;
@@ -15,6 +15,7 @@ public class DataContainer : ScriptableObject
         MeleeReachMultiplier = 1;
 
         //Enemies
+        EnemySpeedMultiplier = 1;
         EnemyHealthMultiplier = 1;
         EnemyShotgunBulletCount = 3;
         EnemyBulletForceMultiplier = 1;
@@ -28,6 +29,7 @@ public class DataContainer : ScriptableObject
     public float MeleeReachMultiplier;
 
     //Enemies
+    public float EnemySpeedMultiplier;
     public float EnemyHealthMultiplier;
     public int EnemyShotgunBulletCount;
     public float EnemyBulletForceMultiplier;
