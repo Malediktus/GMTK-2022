@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: bc24fee7104ae4e2282035b5c1a7db39
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Edu SA Beginner
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 62913401a740c41cabeb333f244515a6, type: 3}
+  - {fileID: 12800000, guid: db635f350864b4b82aa635367abcd106, type: 3}
+  - {fileID: 12800000, guid: 57b2b6f33bef34e91939d41cc35ce46e, type: 3}
+  - {fileID: 12800000, guid: 36a231d6ad4eb42dcbb5051d95e5f036, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
