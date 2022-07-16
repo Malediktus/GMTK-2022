@@ -28,7 +28,7 @@ public class ExtraHealthPerk : MonoBehaviour, IPerk
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Die"))
+        if (collision.gameObject.CompareTag("Die") && !hasDieOnTop)
         {
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;

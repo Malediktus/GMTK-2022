@@ -28,11 +28,11 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        health *= GameManager.EnemyHealthMultiplier;
         target = GameObject.FindGameObjectWithTag("Player");
         _healthScript = gameObject.GetComponent<EnemyHealthScript>();
         _healthScript.health = health;
         rb = gameObject.GetComponent<Rigidbody2D>();
-
     }
 
     private void Update()
