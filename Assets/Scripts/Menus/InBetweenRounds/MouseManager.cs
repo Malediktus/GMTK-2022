@@ -20,10 +20,12 @@ public class MouseManager : MonoBehaviour
                 {
                     Die die;
                     if (targetObj[i].TryGetComponent<Die>(out die)){
-                    die.isSelected = true;
-                    selectedDie = die;
-                    isSelecting = true;
-                }
+                        die.isSelected = true;
+                        selectedDie = die;
+                        isSelecting = true;
+                        break;
+                    }
+                    
                 }
 
 
