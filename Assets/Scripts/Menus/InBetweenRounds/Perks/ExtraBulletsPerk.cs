@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+<<<<<<< HEAD
 using System.Collections;
 using UnityEngine;
 
 
 public class ExtraBulletsPerk : MonoBehaviour, IPerk
+=======
+public class ExtraBulletPerk : MonoBehaviour, IPerk
+>>>>>>> 95dae2ac25008e98a82617394f9e4a0c932a2312
 {
     Collider2D col2d;
     TextMesh textMesh;
