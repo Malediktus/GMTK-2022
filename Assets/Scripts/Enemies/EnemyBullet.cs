@@ -6,11 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public float damage;
     public float lifeTime = 60f;
-
-
-
     float counter = 0f;
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,8 +15,6 @@ public class EnemyBullet : MonoBehaviour
             collision.gameObject.GetComponent<Player>().health -= damage;
         }
         Destroy(gameObject);
-        
-
         
     }
 

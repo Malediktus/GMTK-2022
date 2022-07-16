@@ -44,6 +44,7 @@ public class BasePerk : MonoBehaviour, IPerk
             {
                 die.inCollision = false;
                 die = null;
+                DieValue = 0;
                 hasDieOnTop = false;
             }
         }

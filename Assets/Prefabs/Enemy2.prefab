@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cef4c6ac8fe6e4f84d29b6e4e74313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   speed: 2
   randomInterferance: 3
   ticksBetweenInterferance: 200
@@ -185,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   BulletPrefab: {fileID: 6136852766177541249, guid: 4c39a9e0740bc2e4e974691b201a4340, type: 3}
   damage: 20
   bulletForce: 10

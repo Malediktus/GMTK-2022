@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public DataContainer data;
     public float speed = 5f;
     public float randomInterferance = 2f;
     public float ticksBetweenInterferance = 200;
@@ -15,12 +16,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float marginToTaget = 1f;
 
-
-
-
     public GameObject target;
-
-
 
     private Rigidbody2D rb;
     private EnemyHealthScript _healthScript;
@@ -28,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        health *= GameManager.EnemyHealthMultiplier;
+        health *= data.EnemyHealthMultiplier;
         target = GameObject.FindGameObjectWithTag("Player");
         _healthScript = gameObject.GetComponent<EnemyHealthScript>();
         _healthScript.health = health;
