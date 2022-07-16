@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4f1a714f74f44439c49957b82ad4c1, type: 3}
   m_Name: GlobalData
   m_EditorClassIdentifier: 
-  ExtraHealth: 0
-  ExtraBulletCount: 0
+  ExtraHealth: 130
+  ExtraBulletCount: 1
   RangedDamageMultiplier: 1
-  MeleeDamageMultiplier: 1
-  MeleeReachMultiplier: 1
+  MeleeDamageMultiplier: 0
+  MeleeReachMultiplier: 0
   EnemyHealthMultiplier: 1
   EnemyShotgunBulletCount: 3
   EnemyBulletForceMultiplier: 1
