@@ -9,6 +9,7 @@ public class PerkManager : MonoBehaviour
      * if you are reading this, you are probabily wondering why every single perk has a prefab
      * instead of a better OOP aproach, but you see, im tired and it works kinda (i think)
      */
+
     public List<GameObject> PositivePerkPrefabs;
     public List<GameObject> NegativePerkPrefabs;
     public List<Transform> perkPositions;
@@ -39,27 +40,28 @@ public class PerkManager : MonoBehaviour
             if(i <= 3)
             {
                 obj = Instantiate(PositivePerkPrefabs[Random.Range(0, PositivePerkPrefabs.Count)], perkPositions[i]);
-                Debug.Log(PositivePerkPrefabs[Random.Range(0, PositivePerkPrefabs.Count)], perkPositions[i]);
             }
             else
             {
                 obj = Instantiate(NegativePerkPrefabs[Random.Range(0, NegativePerkPrefabs.Count)], perkPositions[i]);
-            }     
+            }
 
         }
     }
 
     public void ApplyPerks()
     {
-        for(int i = 0; i < PositivePerkPrefabs.Count; i++)
+        foreach (Transform positions in transform)
         {
-            IPerk iperk = PositivePerkPrefabs[i].GetComponent(typeof(IPerk)) as IPerk;
-            iperk.ApplyPerk();
-        }
-        for (int i = 0; i < NegativePerkPrefabs.Count; i++)
-        {
-            IPerk iperk = NegativePerkPrefabs[i].GetComponent(typeof(IPerk)) as IPerk;
-            iperk.ApplyPerk();
+            foreach (Transform perkObjects in positions)
+            {
+                foreach (Transform child in perkObjects)
+                {
+                    IPerk iperk = child.GetComponent(typeof(IPerk)) as IPerk;
+                    if (iperk != null)
+                        iperk.ApplyPerk();
+                }
+            }
         }
     }
 

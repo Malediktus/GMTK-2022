@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     public GameObject target;
-
+    public DataContainer data;
 
     public GameObject BulletPrefab;
     public float damage;
@@ -15,8 +15,9 @@ public class EnemyCombat : MonoBehaviour
 
     private void Start()
     {
+        
         target = GameObject.FindGameObjectWithTag("Player");
-        bulletForce *= GameManager.EnemyBulletForceMultiplier;
+        bulletForce *= data.EnemyBulletForceMultiplier;
     }
 
     private void FixedUpdate()

@@ -10,15 +10,14 @@ public class DiceAnimation : MonoBehaviour
 
     public int RollTheDice()
     {
+        finalSide = Random.Range(0, 5);
         StartCoroutine(RollDice());
-        return finalSide;
+        return finalSide + 1;
     }
 
     IEnumerator RollDice()
     {
         int randomDiceSide = 0;
-        int finalSide = 0;
-
         for (int i = 0; i < 20; i++)
         {
             randomDiceSide = Random.Range(0, 5);
@@ -28,6 +27,6 @@ public class DiceAnimation : MonoBehaviour
             yield return new WaitForSeconds(0.05f + (i * 0.01f));
         }
 
-        finalSide = randomDiceSide + 1;
+        rend.sprite = diceSides[finalSide];
     }
 }

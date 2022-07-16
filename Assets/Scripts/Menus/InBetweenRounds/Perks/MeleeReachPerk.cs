@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeleeReachPerk : MonoBehaviour, IPerk
 {
+    public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
@@ -14,6 +15,7 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
 
     private void Start()
     {
+        
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -48,6 +50,7 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
             {
                 die.inCollision = false;
                 die = null;
+                DieValue = 0;
                 hasDieOnTop = false;
             }
         }
@@ -55,6 +58,6 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        GameManager.MeleeReachMultiplier = .15f * DieValue;
+        data.MeleeReachMultiplier = .15f * DieValue;
     }
 }

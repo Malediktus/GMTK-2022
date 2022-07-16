@@ -15,7 +15,6 @@ public class SpawnSystem : MonoBehaviour
     public int baseEnemysPerWave = 4;
     public float increasePerWave = 1 / 4;
 
-    // Start is called before the first frame update
     void Start()
     {
         newWave();
@@ -42,8 +41,7 @@ public class SpawnSystem : MonoBehaviour
         {
             GameObject enemyprefab = EnemyList[Random.Range(0, EnemyList.Count)];
 
-
-            GameObject enemyobject = GameObject.Instantiate(enemyprefab, (Vector3) randomPointInCircle(), transform.rotation); ;
+            GameObject enemyobject = GameObject.Instantiate(enemyprefab, (Vector3) randomPointInCircle(), transform.rotation);
             enemyobject.GetComponent<Enemy>().target = player;
             enemyobject.GetComponent<EnemyHealthScript>().spawnSystem = this;
         }

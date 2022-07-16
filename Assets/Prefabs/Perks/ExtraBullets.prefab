@@ -191,4 +191,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343a9650eaedc5e40beba185ee2bdfa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   DieLocation: {fileID: 4562538514008398383}

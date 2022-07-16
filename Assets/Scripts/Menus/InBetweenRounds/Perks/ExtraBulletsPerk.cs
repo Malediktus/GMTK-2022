@@ -1,16 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-<<<<<<< HEAD
-using System.Collections;
-using UnityEngine;
-
-
 public class ExtraBulletsPerk : MonoBehaviour, IPerk
-=======
-public class ExtraBulletPerk : MonoBehaviour, IPerk
->>>>>>> 95dae2ac25008e98a82617394f9e4a0c932a2312
 {
+    public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
@@ -21,6 +14,7 @@ public class ExtraBulletPerk : MonoBehaviour, IPerk
 
     private void Start()
     {
+        
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -51,6 +45,7 @@ public class ExtraBulletPerk : MonoBehaviour, IPerk
         {
             die.inCollision = false;
             die = null;
+            DieValue = 0;
             hasDieOnTop = false;
 
         }
@@ -58,6 +53,6 @@ public class ExtraBulletPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        GameManager.ExtraBulletCount += Mathf.CeilToInt(.3f * DieValue);
+        data.ExtraBulletCount += Mathf.CeilToInt(.3f * DieValue);
     }
 }
