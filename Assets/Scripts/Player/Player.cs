@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public float health = 75f;
     public float maxHealth = 75f;
 
+    public float hittingRange = 1f;
+    public float hittingDamage = 3f;
+
     public float speed = 10f;
     public float slowDown = 5f;
     public float aceleration = 20f;
@@ -26,6 +29,18 @@ public class Player : MonoBehaviour
     {
         Move();
         Aim();
+
+        // Hitting
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, hittingRange);
+        foreach(var hitCollider in colliders)
+        {
+            if (Input.GetMouseButtonDown(1) && hitCollider.gameObject.TryGetComponent<EnemyHealthScript>(out EnemyHealthScript healthScript))
+            {
+                hitCollider.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
+                transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+                healthScript.health -= hittingDamage;
+            }
+        }
     }
 
     private void FixedUpdate()
