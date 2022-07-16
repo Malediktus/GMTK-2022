@@ -190,4 +190,4 @@ MonoBehaviour:
   bulletForce: 5
   shootDelay: 1.5
   bulletCount: 3
-  bulletSpreadAngle: 50
+  bulletSpreadAngle: 90
