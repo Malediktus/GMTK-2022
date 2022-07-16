@@ -2,12 +2,12 @@
 using UnityEngine;
 
 
-public class ExtraDamagePerk : MonoBehaviour, IPerk
+public class MeleeDamagePerk : MonoBehaviour, IPerk
 {
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Ranged Damage";
+    string text = "Extra Health";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -50,6 +50,6 @@ public class ExtraDamagePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        GameManager.RangedDamageMultiplier += 0.25f * DieValue;
+        GameManager.MeleeDamageMultiplier = .15f * DieValue;
     }
 }
