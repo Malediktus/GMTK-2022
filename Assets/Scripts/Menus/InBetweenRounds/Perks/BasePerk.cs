@@ -4,22 +4,30 @@ using UnityEngine;
 public class BasePerk : MonoBehaviour, IPerk
 {
     Collider2D col2d;
+    TextMesh textMesh;
     Die die;
     bool hasDieOnTop;
+    public Transform DieLocation;
     private void Start()
     {
-        Debug.Log("test");
         col2d = gameObject.GetComponent<Collider2D>();
+        textMesh = gameObject.GetComponent<TextMesh>();
+        setText();
+    }
+
+    void setText()
+    {
+        textMesh.text = "BasePerk";
     }
     
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
         if(collision.gameObject.CompareTag("Die"))
         {
-            Debug.Log("Collision with Die");
-            die = gameObject.GetComponent<Die>();
+            die = collision.gameObject.GetComponent<Die>();
+            die.inCollision = true;
+            die.snapPosition = DieLocation.transform.position;
             hasDieOnTop = true;
         }
     }
@@ -28,8 +36,10 @@ public class BasePerk : MonoBehaviour, IPerk
     {
         if (collision.gameObject.tag == "Die")
         {
+            die.inCollision = false;
             die = null;
             hasDieOnTop = false;
+
         }
     }
 

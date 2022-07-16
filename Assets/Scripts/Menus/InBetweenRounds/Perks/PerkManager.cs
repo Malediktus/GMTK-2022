@@ -21,6 +21,8 @@ public class PerkManager : MonoBehaviour
         {
             perkPositions.Add(perkParent.transform.GetChild(i));
         }
+
+        CyclePerks();
         
     }
 
