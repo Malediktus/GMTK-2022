@@ -32,7 +32,6 @@ public class Die : MonoBehaviour
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 9);
             wasJustSelected = true;
-            inCollision = true;
             isInPerk = false;
         }
         if(!isSelected && inCollision)

@@ -39,7 +39,7 @@ public class ExtraHealthPerk : MonoBehaviour, IPerk
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Die")
+        if (collision.gameObject.CompareTag("Die"))
         {
             die.inCollision = false;
             die = null;
