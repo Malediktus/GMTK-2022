@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
 
 
     //Enemies
-    public static float EnemyHealthMultiplier;
-    public static int EnemyShotgunBulletCount;
-    public static float EnemyBulletForceMultiplier;
+    public static float EnemyHealthMultiplier = 1;
+    public static int EnemyShotgunBulletCount = 3;
+    public static float EnemyBulletForceMultiplier = 1;
 
 }

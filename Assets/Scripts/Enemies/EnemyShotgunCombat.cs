@@ -18,6 +18,8 @@ public class EnemyShotgunCombat : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        bulletForce *= GameManager.EnemyBulletForceMultiplier;
+        bulletCount = GameManager.EnemyShotgunBulletCount;
     }
 
     private void FixedUpdate()
