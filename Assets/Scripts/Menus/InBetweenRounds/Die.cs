@@ -16,10 +16,9 @@ public class Die : MonoBehaviour
 
 
 
-    public void UpdateValue(int value)
+    public void UpdateValue()
     {
-        Value = value;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[Value - 1];
+        Value = gameObject.GetComponent<DiceAnimation>().RollTheDice();
     }
 
     public int getValue()

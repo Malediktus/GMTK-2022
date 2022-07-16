@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1754484414177240876}
   - component: {fileID: -4036727408651730530}
   - component: {fileID: 1020882286420704583}
+  - component: {fileID: 4684616417280851057}
   m_Layer: 9
   m_Name: Die
   m_TagString: Die
@@ -259,3 +260,23 @@ PolygonCollider2D:
       - {x: 0.03, y: -2.325}
       - {x: 0.06, y: -2.305}
       - {x: 0.095, y: -2.2849998}
+--- !u!114 &4684616417280851057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754484414177240864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8eba0cb984541a987ecc1492debda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 1754484414177240879}
+  diceSides:
+  - {fileID: 21300000, guid: c74a743993301b547a0babae9edd9291, type: 3}
+  - {fileID: 21300000, guid: fec3f4494c4b97042b999848375e56b9, type: 3}
+  - {fileID: 21300000, guid: b46b0d90724d04b488a95337334ae78a, type: 3}
+  - {fileID: 21300000, guid: ba6c0c5085990454eb43bc78dc8be43f, type: 3}
+  - {fileID: 21300000, guid: 57eabdf921cc80441a10e2fda0af96ca, type: 3}
+  - {fileID: 21300000, guid: ac6c529a861ce8246b4b23252767bd49, type: 3}

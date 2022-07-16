@@ -45,7 +45,7 @@ public class PerkManager : MonoBehaviour
         }
     }
 
-    void ApplyPerks()
+    public void ApplyPerks()
     {
         for(int i = 0; i < perks.Count; i++)
         {
