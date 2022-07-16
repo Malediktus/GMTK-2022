@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688129403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 3.5, z: 0}
+  m_LocalPosition: {x: 2, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DiceStartingPos: {fileID: 688129405}
-  Die: {fileID: 1754484414177240864, guid: b783fa64e58c5504b91d7f1956bdf16e, type: 3}
+  DiePrefab: {fileID: 1754484414177240864, guid: b783fa64e58c5504b91d7f1956bdf16e, type: 3}
   baseDiceNum: 5
   extraDice: 0
 --- !u!1 &885511196
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 885511196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 21.25, y: 10, z: 1}
+  m_LocalScale: {x: 29.5, y: 14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -322,7 +322,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

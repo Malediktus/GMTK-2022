@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1754484414177240865}
   - component: {fileID: 1754484414177240879}
-  - component: {fileID: 1754484414177240878}
   - component: {fileID: 1754484414177240876}
+  - component: {fileID: 2050940792149925513}
   m_Layer: 0
   m_Name: Die
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1754484414177240864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 2, z: 9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c74a743993301b547a0babae9edd9291, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1754484414177240878
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754484414177240864}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1754484414177240876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +100,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value: 0
   isSelected: 0
+  sprites:
+  - {fileID: 21300000, guid: c74a743993301b547a0babae9edd9291, type: 3}
+  - {fileID: 21300000, guid: fec3f4494c4b97042b999848375e56b9, type: 3}
+  - {fileID: 21300000, guid: b46b0d90724d04b488a95337334ae78a, type: 3}
+  - {fileID: 21300000, guid: ba6c0c5085990454eb43bc78dc8be43f, type: 3}
+  - {fileID: 21300000, guid: 57eabdf921cc80441a10e2fda0af96ca, type: 3}
+  - {fileID: 21300000, guid: ac6c529a861ce8246b4b23252767bd49, type: 3}
+--- !u!58 &2050940792149925513
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754484414177240864}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2

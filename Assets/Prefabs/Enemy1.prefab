@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8879001690218768541}
   - component: {fileID: 8879001690218768531}
   - component: {fileID: 8879001690218768528}
+  - component: {fileID: -1413139190869675571}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -121,13 +122,9 @@ MonoBehaviour:
   targetDistance: 5
   runAwaySpped: 2
   runAwayDistance: 3
-  health: 8
+  health: 10
   marginToTaget: 0.5
   target: {fileID: 0}
-  slimeBallPrefab: {fileID: 6136852766177541249, guid: c80fc23b9a67f3b428d92f068aaba7c1, type: 3}
-  damage: 5
-  bulletForce: 5
-  shootDelay: 0.5
 --- !u!50 &8879001690218768531
 Rigidbody2D:
   serializedVersion: 4
@@ -175,3 +172,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1413139190869675571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879001690218768542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418cb59cbecb06d4ab5ed53f7a4198dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  BulletPrefab: {fileID: 6136852766177541249, guid: c80fc23b9a67f3b428d92f068aaba7c1, type: 3}
+  damage: 10
+  bulletForce: 5
+  shootDelay: 1.5
+  bulletCount: 3
+  bulletSpreadAngle: 50

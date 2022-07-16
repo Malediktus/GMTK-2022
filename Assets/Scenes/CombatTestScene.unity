@@ -426,8 +426,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 148079834}
+    - target: {fileID: 3189187919383766856, guid: c0e12845915532542b4424e4df7cd176, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3189187919383766859, guid: c0e12845915532542b4424e4df7cd176, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189187919383766859, guid: c0e12845915532542b4424e4df7cd176, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

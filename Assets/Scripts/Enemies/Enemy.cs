@@ -17,19 +17,18 @@ public class Enemy : MonoBehaviour
 
 
 
+
     public GameObject target;
 
-    public GameObject slimeBallPrefab;
-    public float damage;
-    public float bulletForce;
+
 
     private Rigidbody2D rb;
     private EnemyHealthScript _healthScript;
-    private float _counter = 0;
-    public float shootDelay = 0.3f;
+
 
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         _healthScript = gameObject.GetComponent<EnemyHealthScript>();
         _healthScript.health = health;
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -38,6 +37,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (!target)
+            Destroy(gameObject);
 
         Vector3 selfPosition = transform.position;
         Vector2 selfPositionVect2 = new Vector2(selfPosition.x, selfPosition.y);
@@ -62,15 +63,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_counter >= shootDelay)
-        {
-            Shoot();
-            _counter = 0;
-        }
-
-        _counter += Time.fixedDeltaTime;
-
-        if(interferanceTicksCount >= ticksBetweenInterferance)
+        if (interferanceTicksCount >= ticksBetweenInterferance)
         {
             interferance = Random.insideUnitCircle.normalized * randomInterferance;
             interferanceTicksCount = 0;
@@ -79,14 +72,5 @@ public class Enemy : MonoBehaviour
         interferanceTicksCount += Time.fixedDeltaTime;
     }
 
-    private void Shoot()
-    {
-        Vector2 directiontoTarget = target.transform.position - transform.position;
-        Vector2 directiontoTargetNormalized = directiontoTarget.normalized;
 
-        GameObject bullet = Instantiate(slimeBallPrefab, transform.position + new Vector3(directiontoTargetNormalized.x * 1f, directiontoTargetNormalized.y * 1f), transform.rotation);
-        bullet.GetComponent<EnemyBullet>().damage = damage;
-        Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
-        bullet_rb.AddForce(directiontoTargetNormalized * bulletForce, ForceMode2D.Impulse);
-    }
 }
