@@ -22,12 +22,13 @@ public class ExtraHealthPerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Die"))
+        if (collision.gameObject.CompareTag("Die") && !hasDieOnTop)
         {
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;

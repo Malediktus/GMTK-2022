@@ -7,7 +7,7 @@ public class ExtraRangedDamagePerk : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Ranged Damage";
+    string text = "Extra Ranged \nDamage";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -22,6 +22,7 @@ public class ExtraRangedDamagePerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 

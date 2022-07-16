@@ -5,7 +5,8 @@ using System.Collections;
 using UnityEngine;
 
 
-public class ExtraBulletPerk : MonoBehaviour, IPerk
+public class ExtraBulletsPerk : MonoBehaviour, IPerk
+
 {
     Collider2D col2d;
     TextMesh textMesh;
@@ -25,6 +26,7 @@ public class ExtraBulletPerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 

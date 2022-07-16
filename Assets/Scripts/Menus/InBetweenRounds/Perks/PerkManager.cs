@@ -12,6 +12,7 @@ public class PerkManager : MonoBehaviour
     public List<GameObject> PositivePerkPrefabs;
     public List<GameObject> NegativePerkPrefabs;
     public List<Transform> perkPositions;
+
     // Use this for initialization
     void Start()
     {
@@ -25,6 +26,11 @@ public class PerkManager : MonoBehaviour
         
     }
 
+    void MakePrefabs()
+    {
+
+    }
+
     void CyclePerks()
     {
         for(int i = 0; i < perkPositions.Count; i++)
@@ -33,6 +39,7 @@ public class PerkManager : MonoBehaviour
             if(i <= 3)
             {
                 obj = Instantiate(PositivePerkPrefabs[Random.Range(0, PositivePerkPrefabs.Count)], perkPositions[i]);
+                Debug.Log(PositivePerkPrefabs[Random.Range(0, PositivePerkPrefabs.Count)], perkPositions[i]);
             }
             else
             {

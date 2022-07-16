@@ -23,12 +23,16 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
+        health += GameManager.ExtraHealth;
+        maxHealth += GameManager.ExtraHealth;
+
+        hittingDamage *= GameManager.MeleeDamageMultiplier;
+        hittingRange *= GameManager.MeleeReachMultiplier;
     }
 
     private void Update()
     {
         Move();
-        Aim();
 
         // Hitting
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, hittingRange);
@@ -58,7 +62,8 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<HealthBar>().SetMaxValue((int)maxHealth);
         gameObject.GetComponent<HealthBar>().SetHealth((int)health);
     }
-
+    /*
+     
     private void Aim()
     {
         _mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -67,6 +72,10 @@ public class Player : MonoBehaviour
         lookDir = _mousePos - _rb.position;
         _rb.rotation = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
     }
+
+
+     */
+
 
     private void Move()
     {

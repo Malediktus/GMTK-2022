@@ -7,7 +7,7 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Health";
+    string text = "Extra Melee \nDamage";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -22,6 +22,7 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 

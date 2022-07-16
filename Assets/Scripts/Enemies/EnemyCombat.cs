@@ -16,6 +16,7 @@ public class EnemyCombat : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        bulletForce *= GameManager.EnemyBulletForceMultiplier;
     }
 
     private void FixedUpdate()
