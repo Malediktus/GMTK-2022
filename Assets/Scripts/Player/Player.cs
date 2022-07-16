@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 75f;
+    public float maxHealth = 75f;
 
     public float speed = 10f;
     public float slowDown = 5f;

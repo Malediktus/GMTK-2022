@@ -5,6 +5,12 @@ using UnityEngine;
 public class EnemyHealthScript : MonoBehaviour
 {
     public float health = 100f;
+    public SpawnSystem spawnSystem;
+
+    private void Start()
+    {
+        spawnSystem = GameObject.FindGameObjectWithTag("ArenaManager").GetComponent<SpawnSystem>();
+    }
 
     private void FixedUpdate()
     {
@@ -15,6 +21,7 @@ public class EnemyHealthScript : MonoBehaviour
     {
         if (health <= 0f)
         {
+            spawnSystem.enemyDied();
             Destroy(gameObject);
         }
     }

@@ -18,8 +18,10 @@ public class EnemyBullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<Player>().health -= damage;
         }
-
         Destroy(gameObject);
+        
+
+        
     }
 
     private void FixedUpdate()

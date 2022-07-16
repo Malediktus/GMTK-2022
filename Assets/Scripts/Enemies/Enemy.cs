@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemieTest1 : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public float speed = 5f;
+    public float randomInterferance = 2f;
+    public float ticksBetweenInterferance = 200;
+    private float interferanceTicksCount;
+    public Vector2 interferance = new Vector2(0,0);
     public float targetDistance = 5f;
     public float runAwaySpped = 2.5f;
     public float runAwayDistance = 3f;
@@ -42,11 +46,11 @@ public class EnemieTest1 : MonoBehaviour
 
         if (Vector2.Distance(target.transform.position, transform.position) > targetDistance && Mathf.Abs(Vector2.Distance(target.transform.position, transform.position)) > targetDistance + marginToTaget)
         {
-            rb.velocity = directiontoTarget.normalized * speed;
+            rb.velocity = directiontoTarget.normalized * speed + interferance;
         }
         else if(Vector2.Distance(target.transform.position, transform.position) < runAwayDistance)
         {
-            rb.velocity = -directiontoTarget.normalized * runAwaySpped;
+            rb.velocity = -directiontoTarget.normalized * runAwaySpped + interferance;
         }
         else
         {
@@ -65,6 +69,14 @@ public class EnemieTest1 : MonoBehaviour
         }
 
         _counter += Time.fixedDeltaTime;
+
+        if(interferanceTicksCount >= ticksBetweenInterferance)
+        {
+            interferance = Random.insideUnitCircle.normalized * randomInterferance;
+            interferanceTicksCount = 0;
+        }
+
+        interferanceTicksCount += Time.fixedDeltaTime;
     }
 
     private void Shoot()

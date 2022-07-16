@@ -16,11 +16,10 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<EnemyHealthScript>(out EnemyHealthScript healthScript))
         {
-            Debug.Log(healthScript.health);
             healthScript.health -= damage;
-        }
-
+        }       
         Destroy(gameObject);
+       
     }
 
     private void FixedUpdate()
