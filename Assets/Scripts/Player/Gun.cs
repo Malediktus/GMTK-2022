@@ -30,9 +30,17 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(prefab, firePoint.position, firePoint.rotation);
+        
+        Vector3 _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 lookDir;
+        lookDir = _mousePos - transform.position;
+
+
+
+        GameObject bullet = Instantiate(prefab, transform.position + ((Vector3) lookDir.normalized * 1.5f), firePoint.rotation);
         bullet.GetComponent<PlayerBullet>().damage = damage;
         Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
-        bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        bullet_rb.AddForce(lookDir.normalized * bulletForce, ForceMode2D.Impulse);
     }
 }
