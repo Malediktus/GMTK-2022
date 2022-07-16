@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: -5481619498019289428}
   - component: {fileID: 1563416244654131272}
   - component: {fileID: -1240598609008507193}
-  - component: {fileID: 2788218969664908276}
+  - component: {fileID: 6612359672705221327}
   m_Layer: 8
-  m_Name: BasePerk
+  m_Name: MeleeDmagePerk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &2788218969664908276
+--- !u!114 &6612359672705221327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3263535665207082715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ebac71ef252e74c93931221e5ea9a3, type: 3}
+  m_Script: {fileID: 11500000, guid: de37b0db4179c3e41a7cc86c36bd3b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DieLocation: {fileID: 4562538514008398383}

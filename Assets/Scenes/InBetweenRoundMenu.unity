@@ -683,7 +683,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PositivePerkPrefabs:
-  - {fileID: 3263535665207082715, guid: 1f141188ca1bdc6468b7899a58c4aee5, type: 3}
+  - {fileID: 3263535665207082715, guid: ae54fb5961acbb94f9d1e392fd6b5038, type: 3}
+  - {fileID: 3263535665207082715, guid: e0831ba5b685d0c4cb366aa071438536, type: 3}
+  - {fileID: 3263535665207082715, guid: 591fb9cf239f3614291fa454df6142cf, type: 3}
+  - {fileID: 3263535665207082715, guid: 512eee1fbfbb2644ca601f7f3bca24aa, type: 3}
+  - {fileID: 3263535665207082715, guid: 20aef9f7bc5713644b0479042bec92b2, type: 3}
   NegativePerkPrefabs:
   - {fileID: 3263535665207082715, guid: 1f141188ca1bdc6468b7899a58c4aee5, type: 3}
   perkPositions: []

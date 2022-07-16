@@ -33,9 +33,10 @@ public class Die : MonoBehaviour
             wasJustSelected = true;
             isInPerk = false;
         }
-        if(!isSelected && inCollision)
+        if(!isSelected && inCollision && wasJustSelected && !isInPerk)
         {
             transform.position = snapPosition;
+            wasJustSelected = false;
             isInPerk = true;
         }
     }

@@ -22,6 +22,7 @@ public class ExtraHealthPerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 
