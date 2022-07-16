@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class BasePerk : MonoBehaviour, IPerk
+
+public class ExtraDamagePerk : MonoBehaviour, IPerk
 {
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Baseperk";
+    string text = "Extra Ranged Damage";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -22,11 +23,11 @@ public class BasePerk : MonoBehaviour, IPerk
     {
         textMesh.text = text;
     }
-    
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Die"))
+        if (collision.gameObject.CompareTag("Die"))
         {
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;
@@ -49,6 +50,6 @@ public class BasePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        throw new System.NotImplementedException();
+        GameManager.RangedDamageMultiplier += 0.25f * DieValue;
     }
 }
