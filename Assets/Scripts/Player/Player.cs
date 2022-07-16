@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 _mousePos;
 
+    public Animator animator;
+
 
     private void Start()
     {
@@ -33,6 +35,9 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Move();
+
+        Debug.Log(_rb.velocity.magnitude);
+        animator.SetFloat("speed", Mathf.Abs(_rb.velocity.magnitude));
 
         // Hitting
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, hittingRange);
