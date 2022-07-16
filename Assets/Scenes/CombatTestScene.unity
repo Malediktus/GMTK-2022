@@ -853,8 +853,8 @@ GameObject:
   m_Component:
   - component: {fileID: 148079835}
   - component: {fileID: 148079834}
-  - component: {fileID: 148079833}
   - component: {fileID: 148079836}
+  - component: {fileID: 148079837}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -862,14 +862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &148079833
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148079832}
-  m_Enabled: 1
 --- !u!20 &148079834
 Camera:
   m_ObjectHideFlags: 0
@@ -943,6 +935,63 @@ MonoBehaviour:
   player: {fileID: 1371185016}
   offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.3
+--- !u!114 &148079837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148079832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!1 &190025092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190025094}
+  - component: {fileID: 190025093}
+  m_Layer: 0
+  m_Name: FMOD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &190025093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190025092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a21b93be1132b4aa5973513a47ae55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &190025094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190025092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03891009, y: 0.038909912, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251641111
 GameObject:
   m_ObjectHideFlags: 0
@@ -17970,6 +18019,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1371185023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371185013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63344fd40080f24a95882ca2ce8976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPath: event:/SFX/Player/Movement/Footstep
 --- !u!1 &1924209021
 GameObject:
   m_ObjectHideFlags: 0
@@ -18200,6 +18262,10 @@ PrefabInstance:
       value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
+      propertyPath: health
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1371185022}
@@ -18230,10 +18296,6 @@ PrefabInstance:
     - target: {fileID: 4837876851750684869, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
-      propertyPath: health
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8962759363233389154, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: m_Name
