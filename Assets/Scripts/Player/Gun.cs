@@ -14,7 +14,10 @@ public class Gun : MonoBehaviour
     public Transform firePoint;
     private float _counter;
 
-
+    private void Start()
+    {
+        damage *= GameManager.RangedDamageMultiplier;
+    }
 
     void Update()
     {

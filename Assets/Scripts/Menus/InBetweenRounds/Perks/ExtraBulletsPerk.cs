@@ -1,10 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-using System.Collections;
-using UnityEngine;
-
-
 public class ExtraBulletPerk : MonoBehaviour, IPerk
 {
     Collider2D col2d;

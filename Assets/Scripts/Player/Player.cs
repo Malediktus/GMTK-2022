@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
+        health += GameManager.ExtraHealth;
+        maxHealth += GameManager.ExtraHealth;
+
+        hittingDamage *= GameManager.MeleeDamageMultiplier;
+        hittingRange *= GameManager.MeleeReachMultiplier;
     }
 
     private void Update()

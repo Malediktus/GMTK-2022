@@ -9,7 +9,7 @@ public class Die : MonoBehaviour
     private int Value = 0;
     public bool isSelected = false;
     public List<Sprite> sprites;
-    private bool wasJustSelected;
+    //private bool wasJustSelected;
     public bool inCollision;
     public Vector2 snapPosition;
     public bool isInPerk = false;
@@ -30,7 +30,7 @@ public class Die : MonoBehaviour
         if (isSelected)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 9);
-            wasJustSelected = true;
+            //wasJustSelected = true;
             isInPerk = false;
         }
         if(!isSelected && inCollision)
