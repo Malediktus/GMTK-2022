@@ -410,6 +410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1563416244654131272, guid: 1f141188ca1bdc6468b7899a58c4aee5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3263535665207082715, guid: 1f141188ca1bdc6468b7899a58c4aee5, type: 3}
       propertyPath: m_Name
       value: BasePerk

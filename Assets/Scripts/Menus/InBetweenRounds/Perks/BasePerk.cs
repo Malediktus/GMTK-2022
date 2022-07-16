@@ -13,7 +13,7 @@ public class BasePerk : MonoBehaviour, IPerk
     }
     
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision");
         if(collision.gameObject.CompareTag("Die"))
@@ -24,7 +24,7 @@ public class BasePerk : MonoBehaviour, IPerk
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Die")
         {
