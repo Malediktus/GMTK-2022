@@ -39,6 +39,9 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        gameObject.GetComponent<HealthBar>().SetMaxValue((int)maxHealth);
+        gameObject.GetComponent<HealthBar>().SetHealth((int)health);
     }
 
     private void Aim()
