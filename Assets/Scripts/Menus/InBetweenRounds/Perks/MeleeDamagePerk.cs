@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class MeleeDamagePerk : MonoBehaviour, IPerk
 {
+    public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Health";
+    string text = "Extra Melee \nDamage";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
 
     private void Start()
     {
+        
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -22,6 +24,7 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 
@@ -43,6 +46,7 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
         {
             die.inCollision = false;
             die = null;
+            DieValue = 0;
             hasDieOnTop = false;
 
         }
@@ -50,6 +54,6 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        GameManager.MeleeDamageMultiplier = .15f * DieValue;
+        data.MeleeDamageMultiplier = .15f * DieValue;
     }
 }

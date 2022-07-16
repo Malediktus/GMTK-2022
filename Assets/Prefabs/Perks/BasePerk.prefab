@@ -43,8 +43,8 @@ GameObject:
   - component: {fileID: -4160405510958595116}
   - component: {fileID: -5481619498019289428}
   - component: {fileID: 1563416244654131272}
-  - component: {fileID: 982453439}
   - component: {fileID: -1240598609008507193}
+  - component: {fileID: 2788218969664908276}
   m_Layer: 8
   m_Name: BasePerk
   m_TagString: Untagged
@@ -158,19 +158,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.629913, y: 31.184027}
   m_EdgeRadius: 0
---- !u!114 &982453439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3263535665207082715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ebac71ef252e74c93931221e5ea9a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DieLocation: {fileID: 4562538514008398383}
 --- !u!50 &-1240598609008507193
 Rigidbody2D:
   serializedVersion: 4
@@ -192,3 +179,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &2788218969664908276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263535665207082715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ebac71ef252e74c93931221e5ea9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieLocation: {fileID: 4562538514008398383}

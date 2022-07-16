@@ -18,7 +18,7 @@ public class DiceManager : MonoBehaviour
             Vector3 Position = DiceStartingPos.position + new Vector3(offset * i, 0, 0);
             GameObject dieObj = GameObject.Instantiate(DiePrefab, Position, DiceStartingPos.rotation, DiceStartingPos);
             Die die = dieObj.GetComponent<Die>();
-            die.UpdateValue(Random.Range(1, 6));
+            die.UpdateValue();
             DiceList.Add(dieObj);
         }
     }

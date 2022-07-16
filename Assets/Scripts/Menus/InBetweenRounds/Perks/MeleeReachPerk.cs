@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class MeleeReachPerk : MonoBehaviour, IPerk
 {
+    public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Health";
+    string text = "Extra Melee \nReach";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
 
     private void Start()
     {
+        
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -22,6 +24,7 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
     public void setText()
     {
         textMesh.text = text;
+        textMesh.fontSize = 100;
     }
 
 
@@ -39,17 +42,22 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
 
     void OnCollisionExit2D(Collision2D collision)
     {
+        if (die != null)
+            return;
         if (collision.gameObject.CompareTag("Die"))
         {
-            die.inCollision = false;
-            die = null;
-            hasDieOnTop = false;
-
+            if (collision.gameObject.GetComponent<Die>().Equals(die))
+            {
+                die.inCollision = false;
+                die = null;
+                DieValue = 0;
+                hasDieOnTop = false;
+            }
         }
     }
 
     public void ApplyPerk()
     {
-        GameManager.MeleeReachMultiplier = .15f * DieValue;
+        data.MeleeReachMultiplier = .15f * DieValue;
     }
 }

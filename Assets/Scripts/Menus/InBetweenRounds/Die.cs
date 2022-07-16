@@ -16,10 +16,9 @@ public class Die : MonoBehaviour
 
 
 
-    public void UpdateValue(int value)
+    public void UpdateValue()
     {
-        Value = value;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[Value - 1];
+        Value = gameObject.GetComponent<DiceAnimation>().RollTheDice();
     }
 
     public int getValue()
@@ -34,9 +33,10 @@ public class Die : MonoBehaviour
             wasJustSelected = true;
             isInPerk = false;
         }
-        if(!isSelected && inCollision)
+        if(!isSelected && inCollision && !isInPerk)
         {
             transform.position = snapPosition;
+            //wasJustSelected = false;
             isInPerk = true;
         }
     }
