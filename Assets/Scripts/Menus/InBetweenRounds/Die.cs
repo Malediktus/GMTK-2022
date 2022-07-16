@@ -9,6 +9,9 @@ public class Die : MonoBehaviour
     private int Value = 0;
     public bool isSelected = false;
     public List<Sprite> sprites;
+    private bool wasJustSelected;
+    public bool inCollision;
+    public Vector2 snapPosition;
 
 
 
@@ -16,6 +19,11 @@ public class Die : MonoBehaviour
     {
         Value = value;
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[Value - 1];
+    }
+
+    public int getValue()
+    {
+        return Value;
     }
     void Update()
     {

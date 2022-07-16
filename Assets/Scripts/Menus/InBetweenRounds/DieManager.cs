@@ -5,8 +5,8 @@ public class DieManager : MonoBehaviour
 {
     public Transform DiceStartingPos;
     public GameObject DiePrefab;
-    public int baseDiceNum = 5;
-    public int extraDice = 0;
+    public static int baseDiceNum = 5;
+    public static int extraDice = 0;
     void Start()
     {
         //float offset = DiePrefab.transform.localScale.x * 1.5f;

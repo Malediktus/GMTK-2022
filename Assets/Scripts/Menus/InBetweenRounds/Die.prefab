@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1754484414177240879}
   - component: {fileID: 1754484414177240876}
   - component: {fileID: 2050940792149925513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Die
-  m_TagString: Untagged
+  m_TagString: Die
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1754484414177240864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 2, z: 9}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,6 +107,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ba6c0c5085990454eb43bc78dc8be43f, type: 3}
   - {fileID: 21300000, guid: 57eabdf921cc80441a10e2fda0af96ca, type: 3}
   - {fileID: 21300000, guid: ac6c529a861ce8246b4b23252767bd49, type: 3}
+  inCollision: 0
+  snapPosition: {x: 0, y: 0}
 --- !u!58 &2050940792149925513
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,7 +119,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
