@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private Vector2 _mousePos;
 
     public Animator animator;
+    public bool playerFacingRight;
 
 
     private void Start()
@@ -30,13 +31,14 @@ public class Player : MonoBehaviour
 
         hittingDamage *= GameManager.MeleeDamageMultiplier;
         hittingRange *= GameManager.MeleeReachMultiplier;
+
+        playerFacingRight = true;
     }
 
     private void Update()
     {
         Move();
 
-        Debug.Log(_rb.velocity.magnitude);
         animator.SetFloat("speed", Mathf.Abs(_rb.velocity.magnitude));
 
         // Hitting
@@ -85,7 +87,10 @@ public class Player : MonoBehaviour
     private void Move()
     {
         // Geting Input
-        Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        var inputHorizontal = Input.GetAxisRaw("Horizontal");
+        var inputVertical = Input.GetAxisRaw("Vertical");
+
+        Vector2 inputVector = new Vector2(inputHorizontal, inputVertical);
         _rb.velocity += aceleration * Time.deltaTime * inputVector;
 
         // Decent way to do movement
@@ -98,6 +103,18 @@ public class Player : MonoBehaviour
         // Shity Way to Make Player stop when no Input is Given For y Axis
         if (inputVector.y == 0 && _rb.velocity.y > 0) { _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Clamp(_rb.velocity.y - slowDown * Time.deltaTime, 0, 10)); }
         else if (inputVector.y == 0 && _rb.velocity.y < 0) { _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Clamp(_rb.velocity.y + slowDown * Time.deltaTime, -10, 0)); }
+
+        // Flip sprite based on input
+        if (inputHorizontal > 0 && !playerFacingRight){flipFace();}
+        if (inputHorizontal < 0 && playerFacingRight){flipFace();}
+    }
+
+    private void flipFace()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        playerFacingRight = !playerFacingRight;
     }
 }
 

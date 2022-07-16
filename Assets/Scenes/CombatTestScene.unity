@@ -1163,7 +1163,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -18179,6 +18179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1874394029358953834, guid: d18649abf257643ad9cec0511e80b183, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2698239774648440857, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18193,12 +18197,20 @@ PrefabInstance:
       objectReference: {fileID: 148079834}
     - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: speed
-      value: 4
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1371185022}
+    - target: {fileID: 4837876851750684868, guid: d18649abf257643ad9cec0511e80b183, type: 3}
+      propertyPath: playerFacingRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837876851750684869, guid: d18649abf257643ad9cec0511e80b183, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4837876851750684869, guid: d18649abf257643ad9cec0511e80b183, type: 3}
       propertyPath: m_Size.x
       value: 0.6875
