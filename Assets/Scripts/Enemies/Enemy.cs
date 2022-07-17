@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
 
         if(stuck_counter >= stuck_moveTimer)
         {
-            if(stuck_last_pos == (Vector2)transform.position)
+            if(stuck_last_pos == (Vector2)transform.position && Vector2.Distance(transform.position, target.transform.position) > targetDistance * 1.5f)
             {
                 transform.position += new Vector3(0, 2, 0);
                 stuck_counter = 0;

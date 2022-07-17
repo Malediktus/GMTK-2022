@@ -14,6 +14,7 @@ public class SpawnSystem : MonoBehaviour
     public int wave = 1;
     public int baseEnemysPerWave = 4;
     public float increasePerWave = 1 / 4;
+    public DataContainer data;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class SpawnSystem : MonoBehaviour
 
         wave++;
         waveDisplay.text = ("Wave: " + wave);
+        data.wave = wave;
     }
 
     Vector2 randomPointInCircle()

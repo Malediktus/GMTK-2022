@@ -19,6 +19,8 @@ public class DataContainer : ScriptableObject
         EnemyHealthMultiplier = 1;
         EnemyShotgunBulletCount = 3;
         EnemyBulletForceMultiplier = 1;
+
+        wave = 0;
     }
 
     //Player
@@ -33,4 +35,7 @@ public class DataContainer : ScriptableObject
     public float EnemyHealthMultiplier;
     public int EnemyShotgunBulletCount;
     public float EnemyBulletForceMultiplier;
+
+    // Game Progress
+    public int wave;
 }

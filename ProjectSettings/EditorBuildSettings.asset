@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InBetweenRoundMenu.unity
     guid: 4b8fcc1817caca1419bbc8221862fa84
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: c90d6004e264f0b41b205455c409e61a
   m_configObjects: {}

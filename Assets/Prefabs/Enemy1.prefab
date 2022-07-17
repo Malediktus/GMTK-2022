@@ -126,6 +126,9 @@ MonoBehaviour:
   health: 8
   marginToTaget: 0.5
   target: {fileID: 0}
+  stuck_moveTimer: 3
+  stuck_counter: 0
+  stuck_last_pos: {x: 0, y: 0}
 --- !u!50 &8879001690218768531
 Rigidbody2D:
   serializedVersion: 4
@@ -189,7 +192,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   BulletPrefab: {fileID: 6136852766177541249, guid: c80fc23b9a67f3b428d92f068aaba7c1, type: 3}
   damage: 10
-  bulletForce: 5
+  bulletForce: 7
   shootDelay: 1.5
   bulletCount: 3
   bulletSpreadAngle: 90
