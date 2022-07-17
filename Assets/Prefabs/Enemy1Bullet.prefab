@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7487840019885454903}
   - component: {fileID: 6524572735893451655}
   - component: {fileID: 2343872937894812233}
+  - component: {fileID: 4972359108236090429}
   m_Layer: 7
   m_Name: Enemy1Bullet
   m_TagString: Untagged
@@ -160,3 +161,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4972359108236090429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136852766177541249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1362b1e6c670141b66af6261a35922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPath: event:/SFX/Enemies/Combat/EnemyAttack
