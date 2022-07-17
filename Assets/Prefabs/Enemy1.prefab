@@ -119,7 +119,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   speed: 4
   randomInterferance: 3
-  ticksBetweenInterferance: 3
+  ticksBetweenInterferance: 4
   interferance: {x: 0, y: 0}
   targetDistance: 6
   runAwaySpped: 2
