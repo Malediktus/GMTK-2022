@@ -32,7 +32,6 @@ public class EnemyHealthDebuff : MonoBehaviour, IPerk
     {
         if (collision.gameObject.CompareTag("Die") && !hasDieOnTop)
         {
-            Debug.Log("Die");
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;
             die.snapPosition = DieLocation.transform.position;

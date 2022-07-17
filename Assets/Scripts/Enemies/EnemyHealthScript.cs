@@ -5,15 +5,22 @@ using UnityEngine;
 public class EnemyHealthScript : MonoBehaviour
 {
     public float health = 100f;
+    private float lastHealth;
     public SpawnSystem spawnSystem;
 
     private void Start()
     {
+        lastHealth = health;
         spawnSystem = GameObject.FindGameObjectWithTag("ArenaManager").GetComponent<SpawnSystem>();
     }
 
     private void FixedUpdate()
     {
+        if (lastHealth != health)
+        {
+            StartCoroutine(HitAnim());
+        }
+        lastHealth = health;
         HealthCheck();
     }
 
@@ -24,5 +31,12 @@ public class EnemyHealthScript : MonoBehaviour
             spawnSystem.enemyDied();
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator HitAnim()
+    {
+        gameObject.GetComponent<Animator>().SetBool("Hit", true);
+        yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<Animator>().SetBool("Hit", false);
     }
 }
