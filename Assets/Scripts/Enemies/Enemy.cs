@@ -24,10 +24,12 @@ public class Enemy : MonoBehaviour
     public float stuck_moveTimer = 3f;
     public float stuck_counter = 0f;
     public Vector2 stuck_last_pos;
+    private Animator animator;
 
 
     private void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         stuck_last_pos = new Vector2(0, 0);
         health *= data.EnemyHealthMultiplier;
         speed *= data.EnemySpeedMultiplier;
@@ -59,6 +61,8 @@ public class Enemy : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, 0f);
         }
+
+        animator.SetFloat("Speed", rb.velocity.x > 0 || rb.velocity.y > 0 ? 1f : 0f);
 
 
     }
