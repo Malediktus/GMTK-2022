@@ -17,10 +17,11 @@ public class PlayerBullet : MonoBehaviour
         if (collision.gameObject.TryGetComponent<EnemyHealthScript>(out EnemyHealthScript healthScript))
         {
             healthScript.health -= damage;
+
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Enemies/Combat/EnemyHit", gameObject);
         }       
         Destroy(gameObject);
 
-        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Enemies/Combat/EnemyHit", gameObject);
        
     }
 

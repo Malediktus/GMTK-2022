@@ -16,9 +16,12 @@ public class EnemyBullet : MonoBehaviour
             playerAnimator = collision.gameObject.GetComponent<Animator>();
             collision.gameObject.GetComponent<Player>().health -= damage;
             StartCoroutine(HurtAnim());
+
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Player/Combat/PlayerHit", gameObject);
         }
         else
             Destroy(gameObject);
+
     }
 
     private void FixedUpdate()

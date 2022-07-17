@@ -40,6 +40,8 @@ public class EnemyMeleeCombat : MonoBehaviour
         if(distanceToTarget <= reach)
         {
             target.GetComponent<Player>().health -= damage;
+
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Player/Combat/PlayerHit", gameObject);
         }
     }
 }
