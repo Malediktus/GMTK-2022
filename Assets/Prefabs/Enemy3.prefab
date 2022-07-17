@@ -118,8 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
   speed: 4
-  randomInterferance: 0
-  ticksBetweenInterferance: 0
+  randomInterferance: 2
+  ticksBetweenInterferance: 2
   interferance: {x: 0, y: 0}
   targetDistance: 1.5
   runAwaySpped: 0

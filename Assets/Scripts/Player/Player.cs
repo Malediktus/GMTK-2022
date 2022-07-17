@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public DataContainer data;
     public GameObject StaffPrebab;
+    public GunRotate gunRotate;
+    SpriteRenderer spriteRenderer;
 
     public float health = 75f;
     public float maxHealth = 75f;
@@ -31,7 +33,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _rb = gameObject.GetComponent<Rigidbody2D>();
         health += data.ExtraHealth;
         maxHealth += data.ExtraHealth;
@@ -129,9 +131,7 @@ public class Player : MonoBehaviour
 
     private void flipFace()
     {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
+        spriteRenderer.flipX = !playerFacingRight;
         playerFacingRight = !playerFacingRight;
     }
 
