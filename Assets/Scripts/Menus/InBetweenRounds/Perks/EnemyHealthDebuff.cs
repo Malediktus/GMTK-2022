@@ -8,7 +8,7 @@ public class EnemyHealthDebuff : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Enemy Health nerf";
+    string text = "Enemy Healt\nnerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;

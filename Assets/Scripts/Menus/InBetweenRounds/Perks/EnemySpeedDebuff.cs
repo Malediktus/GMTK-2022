@@ -8,7 +8,7 @@ public class EnemySpeedDebuff : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Enemy Speed nerf";
+    string text = "Enemy Speed\nnerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
