@@ -19,6 +19,8 @@ public class PlayerBullet : MonoBehaviour
             healthScript.health -= damage;
         }       
         Destroy(gameObject);
+
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/Enemies/Combat/EnemyHit", gameObject);
        
     }
 
