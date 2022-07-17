@@ -21,9 +21,14 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyHealthScript _healthScript;
 
+    public float stuck_moveTimer = 3f;
+    public float stuck_counter = 0f;
+    public Vector2 stuck_last_pos;
+
 
     private void Start()
     {
+        stuck_last_pos = new Vector2(0, 0);
         health *= data.EnemyHealthMultiplier;
         speed *= data.EnemySpeedMultiplier;
         target = GameObject.FindGameObjectWithTag("Player");
@@ -67,6 +72,18 @@ public class Enemy : MonoBehaviour
         }
 
         interferanceTicksCount += Time.fixedDeltaTime;
+
+        if(stuck_counter >= stuck_moveTimer)
+        {
+            if(stuck_last_pos == (Vector2)transform.position)
+            {
+                transform.position += new Vector3(0, 2, 0);
+                stuck_counter = 0;
+            }
+            stuck_last_pos = transform.position;
+        }
+
+        stuck_counter += Time.fixedDeltaTime;
     }
 
 
