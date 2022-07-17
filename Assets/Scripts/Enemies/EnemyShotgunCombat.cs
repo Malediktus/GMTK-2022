@@ -39,7 +39,7 @@ public class EnemyShotgunCombat : MonoBehaviour
     private void Shoot()
     {
         Vector2 directiontoTarget = target.transform.position - transform.position;
-        Vector2 directiontoTargetNormalized = directiontoTarget.normalized;
+        Vector2 directiontoTargetNormalized = Quaternion.Euler(0, 0, -bulletSpreadAngle / 4) * directiontoTarget.normalized;
         float bulletOffset = bulletSpreadAngle / bulletCount;
 
         for(int i = 0; i < bulletCount; i++)
