@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    public Animator playerAnimator;
     public float damage;
     public float lifeTime = 60f;
     float counter = 0f;
@@ -12,10 +13,13 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.name == "PlayerSprite")
         {
+            Debug.Log("Hit");
+            playerAnimator = collision.gameObject.GetComponent<Animator>();
             collision.gameObject.GetComponent<Player>().health -= damage;
+            StartCoroutine(HurtAnim());
         }
-        Destroy(gameObject);
-        
+        else
+            Destroy(gameObject);
     }
 
     private void FixedUpdate()
@@ -25,5 +29,13 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator HurtAnim()
+    {
+        playerAnimator.SetBool("Hurt", true);
+        yield return new WaitForSeconds(0.1f);
+        playerAnimator.SetBool("Hurt", false);
+        Destroy(gameObject);
     }
 }

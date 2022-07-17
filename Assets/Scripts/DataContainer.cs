@@ -9,7 +9,7 @@ public class DataContainer : ScriptableObject
     {
         //Player
         ExtraHealth = 0;
-        ExtraBulletCount = 0;
+        ExtraBulletCount = 1;
         RangedDamageMultiplier = 1;
         MeleeDamageMultiplier = 1;
         MeleeReachMultiplier = 1;

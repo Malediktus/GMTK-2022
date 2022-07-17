@@ -54,6 +54,6 @@ public class ExtraRangedDamagePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.RangedDamageMultiplier += DieValue > 4 ? 0.25f * DieValue : 1.5f;
+        data.RangedDamageMultiplier = DieValue > 4 ? 0.25f * DieValue : 1.5f;
     }
 }
