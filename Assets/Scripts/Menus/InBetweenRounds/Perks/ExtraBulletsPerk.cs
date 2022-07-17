@@ -53,6 +53,29 @@ public class ExtraBulletsPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.ExtraBulletCount += Mathf.CeilToInt(.3f * DieValue);
+        switch (DieValue)
+        {
+            case 0:
+                data.ExtraBulletCount = 1;
+                break;
+            case 1:
+                data.ExtraBulletCount = 2;
+                break;
+            case 2:
+                data.ExtraBulletCount = 2;
+                break;
+            case 3:
+                data.ExtraBulletCount = 3;
+                break;
+            case 4:
+                data.ExtraBulletCount = 3;
+                break;
+            case 5:
+                data.ExtraBulletCount = 4;
+                break;
+            case 6:
+                data.ExtraBulletCount = 4;
+                break;
+        }
     }
 }

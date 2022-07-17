@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public DataContainer data;
+    public GameObject StaffPrebab;
 
     public float health = 75f;
     public float maxHealth = 75f;
@@ -24,6 +25,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     public bool playerFacingRight;
 
+    private GameObject currentStaff;
+    private bool hitDelay = false;
 
     private void Start()
     {
@@ -36,6 +39,11 @@ public class Player : MonoBehaviour
         hittingRange *= data.MeleeReachMultiplier;
     }
 
+    public Animator GetAnimator()
+    {
+        return gameObject.GetComponent<Animator>();
+    }
+
     private void Update()
     {
         Move();
@@ -43,14 +51,20 @@ public class Player : MonoBehaviour
         animator.SetFloat("speed", Mathf.Abs(_rb.velocity.magnitude));
 
         // Hitting
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, hittingRange);
-        foreach(var hitCollider in colliders)
+        if (Input.GetMouseButtonDown(1) && !hitDelay)
         {
-            if (Input.GetMouseButtonDown(1) && hitCollider.gameObject.TryGetComponent<EnemyHealthScript>(out EnemyHealthScript healthScript))
+            hitDelay = true;
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, hittingRange);
+            currentStaff = Instantiate(StaffPrebab, transform.position, transform.rotation);
+            StartCoroutine(DestroyStaff());
+            foreach (var hitCollider in colliders)
             {
-                hitCollider.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
-                transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-                healthScript.health -= hittingDamage;
+                if (hitCollider.gameObject.TryGetComponent<EnemyHealthScript>(out EnemyHealthScript healthScript))
+                {
+                    hitCollider.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
+                    transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+                    healthScript.health -= hittingDamage;
+                }
             }
         }
     }
@@ -116,6 +130,18 @@ public class Player : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         playerFacingRight = !playerFacingRight;
+    }
+
+    IEnumerator DestroyStaff()
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            currentStaff.transform.position = gameObject.transform.position;
+            yield return new WaitForSeconds(0.01f);
+        }
+        Destroy(currentStaff);
+        yield return new WaitForSeconds(0.1f);
+        hitDelay = false;
     }
 }
 
