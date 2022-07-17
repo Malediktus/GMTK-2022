@@ -8,7 +8,7 @@ public class EnemySpeedDebuff : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Enemy Speed nerf";
+    string text = "Enemy Speed\nnerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -56,7 +56,6 @@ public class EnemySpeedDebuff : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        Debug.Log("Test please");
         switch (DieValue)
         {
             case 0:
@@ -81,6 +80,5 @@ public class EnemySpeedDebuff : MonoBehaviour, IPerk
                 data.EnemySpeedMultiplier = 0.4f;
                 break;
         }
-        Debug.Log(data.EnemySpeedMultiplier);
     }
 }

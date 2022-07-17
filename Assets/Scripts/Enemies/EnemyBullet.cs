@@ -13,7 +13,6 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.name == "PlayerSprite")
         {
-            Debug.Log("Hit");
             playerAnimator = collision.gameObject.GetComponent<Animator>();
             collision.gameObject.GetComponent<Player>().health -= damage;
             StartCoroutine(HurtAnim());

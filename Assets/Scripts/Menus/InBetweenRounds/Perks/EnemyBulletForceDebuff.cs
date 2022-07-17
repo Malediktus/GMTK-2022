@@ -8,7 +8,7 @@ public class EnemyBulletForceDebuff : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Enemy Bullet force nerf";
+    string text = "Enemy Bullet\nforce nerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;

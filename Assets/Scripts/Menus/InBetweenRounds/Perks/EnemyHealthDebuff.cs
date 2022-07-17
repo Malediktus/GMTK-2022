@@ -8,7 +8,7 @@ public class EnemyHealthDebuff : MonoBehaviour, IPerk
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Enemy Health nerf";
+    string text = "Enemy Healt\nnerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
@@ -32,7 +32,6 @@ public class EnemyHealthDebuff : MonoBehaviour, IPerk
     {
         if (collision.gameObject.CompareTag("Die") && !hasDieOnTop)
         {
-            Debug.Log("Die");
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;
             die.snapPosition = DieLocation.transform.position;

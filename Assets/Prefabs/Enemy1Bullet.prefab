@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -8502796596791357373}
   - component: {fileID: 7487840019885454903}
   - component: {fileID: 6524572735893451655}
-  - component: {fileID: 5027497777202011840}
   - component: {fileID: 2343872937894812233}
   m_Layer: 7
   m_Name: Enemy1Bullet
@@ -138,23 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7abc86a29b8c9246a686f603318f6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
   damage: 20
   lifeTime: 20
---- !u!111 &5027497777202011840
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136852766177541249}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: dc3b5e27bb0965d4ca499d662903c96f, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &2343872937894812233
 Animator:
   serializedVersion: 4
@@ -165,7 +150,7 @@ Animator:
   m_GameObject: {fileID: 6136852766177541249}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 569ef83d3c9ec174e8380cbd557d9b37, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8b0c43fabaa0b54391c418cb89cf41f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

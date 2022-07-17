@@ -16,7 +16,6 @@ public class IntroManager : MonoBehaviour
 
         if(DialogManager.GetDialogManager().containsDialog == false)
         {
-            Debug.Log("works");
         }
     }
 }

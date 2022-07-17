@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4442629188606524479}
   - component: {fileID: 1198741549945646916}
   - component: {fileID: 854988843398513148}
-  - component: {fileID: 4475863005384616711}
   - component: {fileID: 7750198230269277649}
   m_Layer: 7
   m_Name: PlayerBulletPrefab
@@ -150,21 +149,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &4475863005384616711
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3038608620181618714}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a5dfd28ac68799c4d8a11ae718f75a6b, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &7750198230269277649
 Animator:
   serializedVersion: 4
