@@ -42,13 +42,11 @@ public class MeleeReachPerk : MonoBehaviour, IPerk
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (die != null)
-            return;
         if (collision.gameObject.CompareTag("Die"))
         {
+            die.inCollision = false;
             if (collision.gameObject.GetComponent<Die>().Equals(die))
             {
-                die.inCollision = false;
                 die = null;
                 DieValue = 0;
                 hasDieOnTop = false;

@@ -44,10 +44,12 @@ public class ExtraBulletsPerk : MonoBehaviour, IPerk
         if (collision.gameObject.CompareTag("Die"))
         {
             die.inCollision = false;
-            die = null;
-            DieValue = 0;
-            hasDieOnTop = false;
-
+            if (collision.gameObject.GetComponent<Die>().Equals(die))
+            {
+                die = null;
+                DieValue = 0;
+                hasDieOnTop = false;
+            }
         }
     }
 
