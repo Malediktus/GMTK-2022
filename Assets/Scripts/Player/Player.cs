@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene("Death");
+            MusicManager.instance.StopMainTrack();
         }
 
         gameObject.GetComponent<HealthBar>().SetMaxValue((int)maxHealth);
