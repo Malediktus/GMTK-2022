@@ -29,8 +29,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7040580504729145767}
   - {fileID: 2698239774648440857}
+  - {fileID: 7040580504729145767}
   m_Father: {fileID: 7222102240900717898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,7 +121,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6875608486935933650}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 67d697ac1123d412bb40d149b7bf286a, type: 2}
+  StaffPrebab: {fileID: 0}
   health: 100
   maxHealth: 75
   hittingRange: 1
@@ -327,6 +328,8 @@ MonoBehaviour:
   slowDown: 50
   aceleration: 200
   cam: {fileID: 0}
+  animator: {fileID: 0}
+  playerFacingRight: 0
 --- !u!50 &4837876851750684875
 Rigidbody2D:
   serializedVersion: 4
@@ -540,7 +543,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6875608486935933650}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
