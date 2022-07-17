@@ -53,11 +53,11 @@ public class Enemy : MonoBehaviour
 
         if (Vector2.Distance(target.transform.position, transform.position) > targetDistance && Mathf.Abs(Vector2.Distance(target.transform.position, transform.position)) > targetDistance + marginToTaget)
         {
-            rb.velocity = directiontoTarget.normalized * speed + interferance;
+            rb.velocity = (directiontoTarget.normalized * speed + interferance).normalized * speed;
         }
         else if(Vector2.Distance(target.transform.position, transform.position) < runAwayDistance)
         {
-            rb.velocity = -directiontoTarget.normalized * runAwaySpped + interferance;
+            rb.velocity = (-directiontoTarget.normalized * speed + interferance).normalized * speed;
         }
         else
         {

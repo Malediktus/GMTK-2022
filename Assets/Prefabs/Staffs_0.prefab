@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7448275122760684084}
   - component: {fileID: 6134739714501973970}
   - component: {fileID: 7764054702083563500}
+  - component: {fileID: 6832252996067125234}
   m_Layer: 0
   m_Name: Staffs_0
   m_TagString: Untagged
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6832252996067125234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495227514837556382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63344fd40080f24a95882ca2ce8976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPath: event:/SFX/Player/Combat/StaffAttack
