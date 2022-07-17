@@ -8,7 +8,7 @@ public class BasePerk : MonoBehaviour, IPerk
     int DieValue = 0;
     string text = "Baseperk";
     Die die;
-    bool hasDieOnTop;
+    bool hasDieOnTop = false;
     public Transform DieLocation;
 
     private void Start()
@@ -28,11 +28,11 @@ public class BasePerk : MonoBehaviour, IPerk
     {
         if(collision.gameObject.CompareTag("Die") && !hasDieOnTop)
         {
+            hasDieOnTop = true;
             die = collision.gameObject.GetComponent<Die>();
             die.inCollision = true;
             die.snapPosition = DieLocation.transform.position;
             DieValue = die.getValue();
-            hasDieOnTop = true;
         }
     }
 
