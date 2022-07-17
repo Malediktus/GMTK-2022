@@ -54,6 +54,6 @@ public class ExtraHealthPerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.ExtraHealth += 10 * DieValue;
+        data.ExtraHealth = 10 * DieValue;
     }
 }

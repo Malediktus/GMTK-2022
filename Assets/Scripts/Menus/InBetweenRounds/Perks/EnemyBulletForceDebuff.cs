@@ -1,21 +1,21 @@
-﻿using System.Collections;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-
-public class MeleeDamagePerk : MonoBehaviour, IPerk
+public class EnemyBulletForceDebuff : MonoBehaviour, IPerk
 {
     public DataContainer data;
     Collider2D col2d;
     TextMesh textMesh;
     int DieValue = 0;
-    string text = "Extra Melee \nDamage";
+    string text = "Enemy Bullet force nerf";
     Die die;
     bool hasDieOnTop;
     public Transform DieLocation;
 
     private void Start()
     {
-        
+
         col2d = gameObject.GetComponent<Collider2D>();
         textMesh = gameObject.GetComponent<TextMesh>();
         setText();
@@ -54,6 +54,26 @@ public class MeleeDamagePerk : MonoBehaviour, IPerk
 
     public void ApplyPerk()
     {
-        data.MeleeDamageMultiplier = DieValue > 4 ? .15f * DieValue : 1.5f;
+        switch (DieValue)
+        {
+            case 1:
+                data.EnemyBulletForceMultiplier = 0.9f;
+                break;
+            case 2:
+                data.EnemyBulletForceMultiplier = 0.8f;
+                break;
+            case 3:
+                data.EnemyBulletForceMultiplier = 0.7f;
+                break;
+            case 4:
+                data.EnemyBulletForceMultiplier = 0.6f;
+                break;
+            case 5:
+                data.EnemyBulletForceMultiplier = 0.5f;
+                break;
+            case 6:
+                data.EnemyBulletForceMultiplier = 0.3f;
+                break;
+        }
     }
 }
