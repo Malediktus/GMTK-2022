@@ -9,15 +9,18 @@ public class DiceManager : MonoBehaviour
     public static int baseDiceNum = 5;
     public static int extraDice = 0;
     public List<GameObject> DiceList;
+
     void Start()
     {
         //float offset = DiePrefab.transform.localScale.x * 1.5f;
         float offset = 5f / 2f;
+        // Create dice
         for(int i = 0; i < baseDiceNum + extraDice; i++)
         {
             Vector3 Position = DiceStartingPos.position + new Vector3(offset * i, 0, 0);
             GameObject dieObj = GameObject.Instantiate(DiePrefab, Position, DiceStartingPos.rotation, DiceStartingPos);
             Die die = dieObj.GetComponent<Die>();
+            die.initialPosition = Position;
             die.UpdateValue();
             DiceList.Add(dieObj);
         }

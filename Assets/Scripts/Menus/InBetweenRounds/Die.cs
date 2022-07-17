@@ -10,10 +10,9 @@ public class Die : MonoBehaviour
     public bool isSelected = false;
     public List<Sprite> sprites;
     public bool inCollision;
+    public Vector2 initialPosition;
     public Vector2 snapPosition;
     public bool isInPerk = false;
-
-
 
     public void UpdateValue()
     {
@@ -24,17 +23,32 @@ public class Die : MonoBehaviour
     {
         return Value;
     }
+
     void Update()
     {
+        var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         if (isSelected)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 9);
+            transform.position = mouseWorldPosition + new Vector3(0, 0, 9);
             isInPerk = false;
         }
-        if(!isSelected && inCollision && !isInPerk)
+        if(!isSelected && !isInPerk)
         {
-            transform.position = snapPosition;
-            isInPerk = true;
+            if (inCollision){
+                // Snap die to perk position
+                transform.position = snapPosition;
+                isInPerk = true;
+            }
+            else {
+                // Return to initial poision
+                transform.position = initialPosition;
+                isInPerk = false;
+            }
         }
+        // if(!isSelected && !inCollision && !isInPerk)
+        // {
+            
+        // }
     }
 }
